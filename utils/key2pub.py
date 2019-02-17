@@ -115,6 +115,10 @@ struct key_params {
 	.n = _n, .len_n = sizeof(_n),	\
 }
 
+#if __GNUC__ >= 6
+#pragma GCC diagnostic ignored "-Wunused-const-variable"
+#endif
+
 static const struct key_params keys[] = {
 ''')
     for n in xrange(n + 1):
